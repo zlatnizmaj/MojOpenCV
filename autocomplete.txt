@@ -1,0 +1,7 @@
+The proposed import solution did not work for me. I had exactly this problem with OpenCV 4.2.0 compiled from sources, installed in my Conda environment and PyCharm 2020.1.
+
+I solved this way:
+
+Select project interpreter
+Click on the settings button next to it and then clicking on the Show paths for selected interpreter
+added the directory containing the cv2 library (in my case in the Conda Python library path - e.g. miniconda3/lib/python3.7/site-packages/cv2/python-3.7). In general check the site-packages/cv2/python-X.X directory)
