@@ -22,7 +22,7 @@ print(f"R={R}, G={G}, B= {B}")
 # Extracting “regions of interest” (ROIs)
 
 # extract a 100x100 pixel square ROI (Region of Interest) from the
-# input image starting at x=320,y=60 at ending at x=420,y=160
+# input image starting at x=320,y=60 at ending at x=420,y=160auto
 roi = image[60:160, 320:420]
 cv2.imshow("ROI", roi)
 #cv2.waitKey(0)
