@@ -1,3 +1,5 @@
+import numpy as np
+
 r1 = int(input("Enter No of rows of 1st Matrix: "))
 c1 = int(input("Enter No of columns of 1st Matrix: "))
 
@@ -16,6 +18,9 @@ if c1 == r2:
         for j in range(c1):
             g.append(int(input()))
         mat1.append(g)
+
+    for r in mat1:
+        print(r)
 
     for i in range(r1):
         for j in range(c1):
@@ -55,3 +60,14 @@ if c1 == r2:
         print(r)
 else:
     print("\nNot possible")
+
+print("\nUsing numpy!!!")
+
+a1 = np.array([[1, 2],
+               [3, 4]])
+
+a2 = np.array([[5,6],
+               [7, 8]])
+
+answer = np.matmul(a1, a2)
+print("\n", answer)
