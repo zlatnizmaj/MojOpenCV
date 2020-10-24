@@ -40,10 +40,10 @@ def plot_imgs(imgs, cols=5, size=7, title=""):
 
 
 
-# src_img = imageio.imread('http://www.ic.unicamp.br/~helio/imagens_registro/foto1A.jpg')
-# tar_img = imageio.imread('http://www.ic.unicamp.br/~helio/imagens_registro/foto1B.jpg')
-src_img = imageio.imread('gaobo02.jpg')
-tar_img = imageio.imread('gaobo01.jpg')
+src_img = imageio.imread('foto1A.jpg')
+tar_img = imageio.imread('foto1B.jpg')
+# src_img = imageio.imread('./images/test04.jpg')
+# tar_img = imageio.imread('./images/test03.jpg')
 
 src_gray = cv2.cvtColor(src_img, cv2.COLOR_RGB2GRAY)
 tar_gray = cv2.cvtColor(tar_img, cv2.COLOR_RGB2GRAY)

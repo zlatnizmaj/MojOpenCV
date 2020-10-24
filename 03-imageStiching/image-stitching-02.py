@@ -9,12 +9,14 @@ import  numpy as np
 import  matplotlib.pyplot as plt
 from random import randrange
 
-img_ = cv2.imread("uttower_right.jpeg")
+# img_ = cv2.imread("uttower_right.jpeg")
+img_ = cv2.imread("./images/test01.jpg")
 img1 = cv2.cvtColor(img_, cv2.COLOR_BGR2GRAY)
 # cv2.imshow("Right Image", img_)
 # cv2.waitKey(0)
 
-img = cv2.imread("uttower_left.jpeg")
+# img = cv2.imread("uttower_left.jpeg")
+img = cv2.imread("./images/test02.jpg")
 img2 = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # cv2.imshow("Left Image", img)
 # cv2.waitKey(0)
