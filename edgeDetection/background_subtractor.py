@@ -27,3 +27,27 @@ while (cap.isOpened()):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         # Extracting the foreground
+        edges_foreground = cv2.bilateralFilter(gray, 9, 75, 75)
+        foreground = fgbg.apply(edges_foreground)
+        # Smooth out to get the moving area
+        kernel = np.ones((50, 50), np.uint8)
+        foreground = cv2.morphologyEx(foreground, cv2.MORPH_CLOSE, kernel)
+        # Apply static edge extraction
+        edges_filtered = cv2.Canny(edges_foreground, 60, 120)
+
+        # crop off the edges out of the moving area
+        cropped = (foreground // 255) * edges_filtered
+        # Stacking the images to print them together for comparision
+        images = np.hstack((gray, edges_filtered, cropped))
+        cv2.imshow("Frame-BackgroundExtractor", images)
+
+        # Press Q to exit
+        if cv2.waitKey(25) & 0xFF == ord('q'):
+            break
+    # Break the loop
+    else:
+        break
+
+cap.release()
+# close all the frames
+cv2.destroyAllWindows()
