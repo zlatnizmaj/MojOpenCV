@@ -1,4 +1,4 @@
-# link tutorial: https://www.pyimagesearch.com/2018/07/19/opencv-tutorial-a-guide-to-learn-opencv/
+
 # Loading and displaying an image
 import imutils
 import cv2
